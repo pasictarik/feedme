@@ -1,0 +1,11 @@
+.card {
+    display: inline-block;
+    margin-bottom: 5px;
+}
+.card-image {
+    width: auto;
+    height: auto;
+}
+.card-header {
+    /*background-color: #0000F0;*/
+}
