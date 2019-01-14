@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Category;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -23,28 +24,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $meals = [
-            [
-                'name' => 'Zeljanica',
-                'price' => '8'
-            ],
-            [
-                'name' => 'Sirnica',
-                'price' => '8'
-            ],
-            [
-                'name' => 'Burek',
-                'price' => '12'
-            ],
-            [
-                'name' => 'Tikvenica',
-                'price' => '8'
-            ],
-            [
-                'name' => 'Krompirusa',
-                'price' => '6'
-            ]
-        ];
-        return view('home', compact('meals'));
+        $categories = Category::all();
+        return view('home', compact('categories'));
     }
 }
